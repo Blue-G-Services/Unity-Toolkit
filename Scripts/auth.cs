@@ -45,10 +45,6 @@ public class auth : MonoBehaviour
         {
             var result = await DynamicPixels.Authentication.LoginAsGuest(new LoginAsGuestParams
             {
-                Device = new Device
-                {
-                    DeviceId = "12345"
-                }
             });
             
             Debug.Log(result.Token);
