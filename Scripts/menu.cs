@@ -20,6 +20,8 @@ public class menu : MonoBehaviour
     [SerializeField]
     public Button userButton;
     [SerializeField]
+    public Button tableButton;
+    [SerializeField]
     public Button devicesButton;
 
     [SerializeField]
@@ -34,6 +36,7 @@ public class menu : MonoBehaviour
         partiesButton.onClick.AddListener(() => SceneManager.LoadScene("party", LoadSceneMode.Single));
         userButton.onClick.AddListener(() => SceneManager.LoadScene("user", LoadSceneMode.Single));
         devicesButton.onClick.AddListener(() => SceneManager.LoadScene("devices", LoadSceneMode.Single));
+        tableButton.onClick.AddListener(() => SceneManager.LoadScene("table", LoadSceneMode.Single));
 
         logoutButton.onClick.AddListener(() =>
         {
