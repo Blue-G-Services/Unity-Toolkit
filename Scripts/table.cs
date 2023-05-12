@@ -39,7 +39,11 @@ public class table : MonoBehaviour
                 tableId = tableId,
                 options = new FindOptions
                 {
-                    Conditions = new Eq("name", "amir").ToQuery()
+                    Conditions = new Eq("name", "amir").ToQuery(),
+                    Joins = new List<JoinParams>(new []
+                    {
+                        new JoinParams{TableName = "645c338daf12d097d14c5d23", foreignField = "id", localField = "name"}, 
+                    })
                 }
             });
         });
