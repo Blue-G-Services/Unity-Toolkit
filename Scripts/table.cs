@@ -34,7 +34,7 @@ public class table : MonoBehaviour
         FindRowsButton.onClick.AddListener(async () =>
         {
             var tableId = TableIdParams.text;
-            var rows = await DynamicPixels.Table.Find(new FindParams
+            var rows = await DynamicPixels.Table.Find<Person, FindParams>(new FindParams
             {
                 tableId = tableId,
                 options = new FindOptions
@@ -53,7 +53,7 @@ public class table : MonoBehaviour
             var tableId = TableIdParams.text;
             var rowId = RowIdParams.text;
 
-            var row = await DynamicPixels.Table.FindById(new FindByIdParams
+            var row = await DynamicPixels.Table.FindById<Person, FindByIdParams>(new FindByIdParams
             {
                 RowId = Int32.Parse(rowId),
                 TableId = tableId
@@ -67,7 +67,7 @@ public class table : MonoBehaviour
             var tableId = TableIdParams.text;
 
             
-            var row = await DynamicPixels.Table.Insert(new InsertParams
+            var row = await DynamicPixels.Table.Insert<Person, InsertParams>(new InsertParams
             {
                 TableId = tableId,
                 Data = new Person
@@ -83,7 +83,7 @@ public class table : MonoBehaviour
             var tableId = TableIdParams.text;
             var rowId = RowIdParams.text;
 
-            var row = await DynamicPixels.Table.FindByIdAndUpdate(new FindByIdAndUpdateParams
+            var row = await DynamicPixels.Table.FindByIdAndUpdate<Person, FindByIdAndUpdateParams>(new FindByIdAndUpdateParams
             {
                 RowId = Int32.Parse(rowId),
                 TableId = tableId,
