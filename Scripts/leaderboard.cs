@@ -22,7 +22,7 @@ public class leaderboard : MonoBehaviour
         GetScoresButton.onClick.AddListener(async () =>
         {
             var leaderboardId = LeaderboardInput.text;
-            var scores = await DynamicPixels.Table.GetServices().Leaderboard.GetScores(new GetScoresParams
+            var scores = await DynamicPixels.Table.GetServices().Leaderboard.GetUsersScores(new GetScoresParams
             {
                 LeaderboardId = leaderboardId
             });
